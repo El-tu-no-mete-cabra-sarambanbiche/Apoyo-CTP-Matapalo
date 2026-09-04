@@ -1,15 +1,15 @@
-# Colegio Valle Central
+# Voz Escolar | Colegio Valle Central
 
-Portal institucional responsive para estudiantes, docentes y familias, preparado para publicarse en GitHub Pages.
+Prototipo de una plataforma institucional para reportar y dar seguimiento a problemas de infraestructura, convivencia, limpieza y seguridad.
 
 ## Incluye
 
-- Inicio de sesión visual con perfiles de estudiante y docente.
-- Enlace al sitio oficial del Ministerio de Educación Pública (MEP).
-- Directorio de docentes con filtros por departamento.
-- Horarios de atención institucional.
-- Calendario de feriados, celebraciones, vacaciones y días libres.
-- Comunicados y avisos escolares.
+- Portada institucional con propuesta de valor para dirección y coordinación.
+- Centro de reportes con categorías, ubicación, descripción y opción anónima.
+- Panel de seguimiento con estados, estadísticas y filtros.
+- Recursos de convivencia y ruta de apoyo.
+- Página institucional con beneficios para dirección, coordinación y comunidad.
+- Flujo de registro docente, inicio de sesión y perfil docente de demostración.
 - Diseño adaptable para teléfono, tablet y escritorio.
 
 ## Ejecutar localmente
@@ -22,20 +22,27 @@ python -m http.server 8000
 
 Visita `http://localhost:8000`.
 
-## Archivos
+## Páginas
 
 ```text
 .
-├── index.html
-├── Restaurante.html
+├── index.html       # Presentación principal
+├── reportes.html    # Registro y seguimiento de incidencias
+├── recursos.html    # Convivencia y bienestar
+├── contacto.html    # Propuesta institucional
+├── login.html       # Acceso docente de demostración
+├── perfil.html      # Perfil docente
+├── docente.html     # Ficha docente
 └── README.md
 ```
 
 `Restaurante.html` conserva la URL anterior y redirige a `index.html`.
 
-## Importante sobre el inicio de sesión
+Los reportes de demostración se guardan en `localStorage` cuando el navegador lo permite y funcionan en memoria al abrir los archivos directamente.
 
-El formulario de acceso es un prototipo front-end: no guarda ni valida credenciales. Antes de usarlo con estudiantes o docentes, debe conectarse a un sistema real de autenticación con HTTPS, almacenamiento seguro y control de permisos. El botón del MEP dirige al sitio oficial para trámites y consultas institucionales.
+## Importante sobre el prototipo
+
+El formulario de acceso y los reportes son prototipos front-end. Antes de usarlo con estudiantes o docentes, debe conectarse a autenticación real, una base de datos segura, HTTPS, control de permisos, notificaciones y un panel administrativo con responsables. El botón del MEP dirige al sitio oficial para trámites y consultas institucionales.
 
 ## Publicar en GitHub Pages
 
